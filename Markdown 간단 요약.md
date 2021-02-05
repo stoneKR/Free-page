@@ -70,3 +70,61 @@
 +    대쉬(hyphen)
 +    별표(asterisks)
 +    더하기(plus sign)
+
+
+
+### 링크 (links)
+-------------------
+<a> 로 변환 됩니다.
+  ```
+  [GOOGLE](https://google.com)
+
+[NAVER](https://naver.com "링크 설명(title)을 작성하세요.")
+
+[상대적 참조](../users/login)
+
+[Dribbble][Dribbble link]
+
+[GitHub][1]
+
+문서 안에서 [참조 링크]를 그대로 사용할 수도 있습니다.
+
+다음과 같이 문서 내 일반 URL이나 꺾쇠 괄호(`< >`, Angle Brackets)안의 URL은 자동으로 링크를 사용합니다.
+구글 홈페이지: https://google.com
+네이버 홈페이지: <https://naver.com>
+
+[Dribbble link]: https://dribbble.com
+[1]: https://github.com
+[참조 링크]: https://naver.com "네이버로 이동합니다!"
+  ```
+  
+  > 문서 안에서 참조 링크를 그대로 사용할 수도 있습니다.
+  > 다음과 같이 문서 내 일반 URL이나 꺾쇠 괄호(< >, Angle Brackets)안의 URL은 자동으로 링크를 사용합니다.
+  > 구글 홈페이지: https://google.com
+  > 네이버 홈페이지: https://naver.com
+  
+  
+  
+### 이미지(images)
+-------------------
+
+> <img>로 변환됩니다.
+> 링크과 비슷하지만 앞에 !가 붙습니다.
+
+
+```
+![대체 텍스트(alternative text)를 입력하세요!](http://www.gstatic.com/webp/gallery/5.jpg "링크 설명(title)을 작성하세요.")
+
+![Kayak][logo]
+
+[logo]: http://www.gstatic.com/webp/gallery/2.jpg "To go kayaking."
+```
+
+### 이미지에 링크
+--------------------------
+
+마크다운 이미지 코드를 링크 코드로 묶어 줍니다.
+
+```
+[![Vue](/images/vue.png)](https://kr.vuejs.org/)
+```
