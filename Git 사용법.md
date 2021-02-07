@@ -1,13 +1,32 @@
 # Git 사용에 필요한 메모
+<<<<<<< HEAD
 ----------
 ### 명령어
 -----------
 1. cd [폴더 이름] : 해당 디렉토리로 이동
+=======
+
+----------
+
+
+### Git Bash 설치
+------------
+> Git을 사용하기에 앞서 Git Bash 툴을 이용하여 진행합니다
+> 설치는 https://git-scm.com/ 에서 합니다.
+
+### 명령어
+
+-----------
+
+1. cd [폴더 이름] : 해당 디렉토리로 이동
+
+>>>>>>> 6978699b967b1fa694dbe0bd9834b412676869bd
 ```
 $ cd .. : 하위 폴더로 이동
 $ cd 디렉토리 이름 : 해당 디렉토리로 이동
 $ cd /c/workspace : 절대경로 workspace로 한번에 이동
 ```
+<<<<<<< HEAD
 2. mkdir [폴더 이름] : 디렉토리 생성
 ```
 $ mkdir test : 현재 위치에 test 디렉토리 생성
@@ -24,15 +43,54 @@ $ ls
 
 ----------
 + 사용자 등록
-user.email과 user.name을 등록한다.
+
+  user.email과 user.name을 등록한다.
+  =======
+
+2. mkdir [폴더 이름] : 디렉토리 생성
+
+```
+$ mkdir test : 현재 위치에 test 디렉토리 생성
+```
+
+3. touch [파일 이름] : 빈 파일 생성
+
+```
+$ touch test.txt : 현재 위치에 test.txt 파일을 생성
+```
+
+4. ls : 현재 디렉토리 폴더 , 파일을 보여줌
+
+```
+$ ls
+```
+
+### Git 사용
+
+----------
+
++ 사용자 등록
+  user.email과 user.name을 등록한다.
+
+>>>>>>> 6978699b967b1fa694dbe0bd9834b412676869bd
 ```
 $ git config --global user.email "[이메일 주소]"
 $ git config --global user.name "[이름]"
 ```
+<<<<<<< HEAD
 + 저장소 생성 및 commit
 ```
 $ git init
 ```
+=======
+
++ 저장소 생성 및 commit
+
+```
+$ git init
+```
+
+>>>>>>> 6978699b967b1fa694dbe0bd9834b412676869bd
 init을 하면, master branch가 생성됨 (git basg 현재 폴더명에 branch 이름(master)추가)
 
 git bash에서 뒤에 (master)와 같이 branch 이름이 보이면 git 저장소가 설정된 폴더다.
@@ -128,4 +186,20 @@ $ git push origin master
 ```
 
 데이터가 전송되는 모습이 나오면서, commit한 데이터가 github에 올라간 모습을 확인 할 수 있다
+
+
+
+
+
+## pull 불가시
+
++ pull이 사용이 안되는 경우가 가끔 있는데 사용하면 가능해집니다  
+
+
+
+````
+git pull origin 브런치명 --allow-unrelated-histories
+
+--allow-unrelated-histories  이 명령 옵션은 이미 존재하는 두 프로젝트의 기록(history)을 저장하는 드문 상황에 사용된다고 한다. 즉, git에서는 서로 관련 기록이 없는 이질적인 두 프로젝트를 병합할 때 기본적으로 거부하는데, 이것을 허용해 주는 것이다.
+````
 
