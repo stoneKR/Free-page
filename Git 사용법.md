@@ -116,22 +116,21 @@ git commit -m "커밋 메시지"
  
 // Staging Area에 들어간 파일에 대해서만 (워킹 디렉터리는 적용 X)
 git commit -a -m "커밋 메시지"
-
-
 ```
 
-+ git reset --hard [commit 아이디]
+### git reset --hard [commit 아이디]
+----------
 
 > 때떄로 이전 commit 상태로 돌아가고 싶을 때가 있다
 > reset 기능을 통해 해당  commit 상태로 되돌리는 것이 가능함
-``
+
+```
 > --hard : commit 당시 상태로 완전히 되돌림
 >
 > --soft : commit만 취소하고 파일들은 현재 상태를 유지
 >
 >(soft는 즉, commit id는 삭제되지만 해당 commit id로 지정한 파일은 사라지지 않는다)
 ```
-
 
 ### git log  
 ---------
@@ -198,6 +197,8 @@ git remote -v
 $ git remote add origin [연동할 github repository url].git
 ```
 
+------------
+
 이제 해당 로컬 저장소와 원격 저장소가 연동된다
 
 잘 연동되었는지 확인 하려면 아래와 같이 작성하면 된다
@@ -206,7 +207,9 @@ $ git remote add origin [연동할 github repository url].git
 $ git remote -v
 ```
 
-콘솔창에 내 github repisitory 주소가 잘 나오면 문제가 없는 것 이다
++ 콘솔창에 내 github repisitory 주소가 잘 나오면 문제가 없는 것 이다
+
+----------
 
 + 원격 저장소에 올리기
 
