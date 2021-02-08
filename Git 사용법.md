@@ -38,14 +38,15 @@ $ touch test.txt : 현재 위치에 test.txt 파일을 생성
 $ ls
 ```
 
-### Git 사용
+# Git 사용
 
 
 ### git config 
 ----------
 
-+ 사용자 등록 git config (최초 1회 실행)
-``
++ 사용자 등록 git config (최초 1회 실행)  
+
+```
 // git commit에 사용될 username
 git config --global user.name "your_name"
  
@@ -56,9 +57,7 @@ git config --global user.email "your_email@example.com"
 git config --list
 ```
 
-+ 저장소 생성 및 commit
-
-```
++ 해당 작업은 <u>최초 1회만</u> 실행!
 ----------
 
 $ git init
