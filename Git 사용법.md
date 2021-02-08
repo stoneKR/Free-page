@@ -59,33 +59,52 @@ git config --list
 
 + 해당 작업은 <u>최초 1회만</u> 실행!
 ----------
-
-$ git init
+### git init
+  
+------------
++ git init : 현재 디렉토리를 로컬저장소로 설정한다.
 ```
 
-init을 하면, master branch가 생성됨 (git basg 현재 폴더명에 branch 이름(master)추가)
+// 로컬저장소로 설정할 프로젝트 위치로 이동한다.
+cd D:/workspace/
+ 
+// 로컬저장소로 설정한다.
+// (master) 브랜치로 보이면 성공한 것이다.
+git init
+ 
+// 만약 init을 취소하려면 아래의 명령어를 입력한다.
+rm -r .git
+```
 
-git bash에서 뒤에 (master)와 같이 branch 이름이 보이면 git 저장소가 설정된 폴더다.
+### git status(로컬저장소의 현재 상태)
+------------
 
-init 이후에 해당 폴더에 .git의 숨김 폴더는 건들지 않는다.
++ git status를 사용함으로 로컬저장소의 현재 상태를 보여준다.
+
+
+### git add(Staging Area로 이동)  
+-------------
+
++ 파일을 준비영역(Staging Area)으로 옮긴다. (GitHub와 연동하려면 git remote로 원격 저장소와 연결해야 함)
 
 ```
-$ git add .
-```
-
-add 뒤에 .은 현재 새로 만들어진 모든 파일을 저장할 대상으로 지정한다는 뜻
-
-(하나만 지정 하려면 해당 파일 이름을 적어도 됨)
-
-```
+// a.html 파일만 추가
+git add a.html
+ 
+// 워킹 디렉터리 내 모든 파일을 추가
+git add .
+ 
+// 명령 프롬프트에서 상호작용하면서 추가 (나갈땐 q를 입력)
+git add -i
+ 
+// 진행중인 파일일 경우, Staging Area에서 워킹 디렉터리로 옮겨온다. 
+$git rm --cached a.html
+$git rm -r --cached .
 $ git commit -m "메세지"
 ```
 
-commit 이란 쉽게 생각하면, 우리가 게임을 하면서 save 기능을 사용하는 것과 같다.
 
-add를 통해 지정한 파일들을 commit한다. -m 은 메세지를 남긴다는 명령어로, 어떤 내용을 commit 하는지 상황에 따라 작성해주면 된다
 
-```
 $ git log
 ```
 
