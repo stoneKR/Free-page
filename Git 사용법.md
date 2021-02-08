@@ -40,19 +40,27 @@ $ ls
 
 ### Git 사용
 
+
+### git config 
 ----------
 
-+ 사용자 등록
-  user.email과 user.name을 등록한다.
-
-```
-$ git config --global user.email "[이메일 주소]"
-$ git config --global user.name "[이름]"
++ 사용자 등록 git config (최초 1회 실행)
+``
+// git commit에 사용될 username
+git config --global user.name "your_name"
+ 
+// git commit에 사용될 email
+git config --global user.email "your_email@example.com"
+ 
+// 설정한 내용을 확인할 수 있다.
+git config --list
 ```
 
 + 저장소 생성 및 commit
 
 ```
+----------
+
 $ git init
 ```
 
