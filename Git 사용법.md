@@ -103,30 +103,68 @@ $git rm -r --cached .
 $ git commit -m "메세지"
 ```
 
+### git commit(Staging Area의 파일을 로컬저장소에 저장)
 
-
-$ git log
-```
-
-commit 된 list 를 보여줌
-
-log를 통해보면, 7자리로 commit id가 지정된 모습을 확인 할 수 있다.
-
-+ 이전 commit 돌아가기
+-------------   
 
 ```
-$ git reset --hard [commit 아이디]
+// 에디터가 출력되고, 에디터에서 커밋 메시지 입력 후 저장하면 커밋됨
+git commit
+ 
+// 간단한 커밋 메시지를 입력후 커밋
+git commit -m "커밋 메시지"
+ 
+// Staging Area에 들어간 파일에 대해서만 (워킹 디렉터리는 적용 X)
+git commit -a -m "커밋 메시지"
+
+
 ```
 
-때떄로 이전 commit 상태로 돌아가고 싶을 때가 있다
++ git reset --hard [commit 아이디]
 
-reset 기능을 통해 해당  commit 상태로 되돌리는 것이 가능함
-
+> 때떄로 이전 commit 상태로 돌아가고 싶을 때가 있다
+> reset 기능을 통해 해당  commit 상태로 되돌리는 것이 가능함
+``
 > --hard : commit 당시 상태로 완전히 되돌림
 >
 > --soft : commit만 취소하고 파일들은 현재 상태를 유지
 >
 >(soft는 즉, commit id는 삭제되지만 해당 commit id로 지정한 파일은 사라지지 않는다)
+```
+
+
+### git log  
+---------
+  
++ 로컬저장소의 커밋 이력 조회
+
+```
+// 커밋 이력 상세조회
+git log 
+ 
+// 커밋 이력중 커밋ID, 타이틀 메시지만 조회
+git log --oneline
+ 
+// 모든 브랜치 커밋 이력 조회
+git log --oneline --decorate --graph --all
+ 
+// 특정 파일의 변경 커밋 조회
+git log -- a.html
+```
+
+### git remote
+---------
+
++ 로컬저장소와 원격저장소를 연결
+
+```
+// Github 원격저장소와 연결한다.
+git remote add origin [자신의 Github 원격저장소 주소]
+ 
+// 연결된 원격저장소 확인한다.
+git remote -v
+```
+
 
 
 
